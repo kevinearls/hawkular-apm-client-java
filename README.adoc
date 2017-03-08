@@ -1,4 +1,4 @@
-# Java client for [Hawkular APM](https://github.com/hawkular/hawkular-apm)
+# Java client for link:https://github.com/hawkular/hawkular-apm[Hawkular APM]
 
 ```java
 HawkularApmClient client = HawkularApmClient.builder("my-tenant")
