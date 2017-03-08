@@ -1,0 +1,13 @@
+# Java client for [Hawkular APM](https://github.com/hawkular/hawkular-apm)
+
+```java
+HawkularApmClient client = HawkularApmClient.builder("my-tenant")
+    .uri("http://localhost:8080")
+    .basicAuthentication("jdoe", "password")
+    .build();
+
+client.analytics().....
+client.configuration().....
+client .serviceDeployment()....
+client.trace().....
+```
