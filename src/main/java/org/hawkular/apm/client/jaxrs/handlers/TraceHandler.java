@@ -30,7 +30,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.hawkular.apm.api.model.trace.Trace;
-import org.hawkular.apm.api.services.Criteria;
+import org.hawkular.apm.client.model.Criteria;
 
 /**
  * @author Jeeva Kandasamy (jkandasa)

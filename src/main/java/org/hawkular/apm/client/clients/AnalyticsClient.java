@@ -29,7 +29,7 @@ import org.hawkular.apm.api.model.analytics.PropertyInfo;
 import org.hawkular.apm.api.model.analytics.TimeseriesStatistics;
 import org.hawkular.apm.api.model.analytics.TransactionInfo;
 import org.hawkular.apm.api.model.events.CompletionTime;
-import org.hawkular.apm.api.services.Criteria;
+import org.hawkular.apm.client.model.Criteria;
 import org.hawkular.client.core.ClientResponse;
 import org.hawkular.client.core.jaxrs.Empty;
 

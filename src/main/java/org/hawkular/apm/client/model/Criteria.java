@@ -14,27 +14,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.hawkular.apm.client.clients;
+package org.hawkular.apm.client.model;
 
-import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.hawkular.apm.api.model.trace.Trace;
-import org.hawkular.apm.client.model.Criteria;
-import org.hawkular.client.core.ClientResponse;
-import org.hawkular.client.core.jaxrs.Empty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * @author Jeeva Kandasamy (jkandasa)
  */
-public interface TraceClient {
-    ClientResponse<Empty> addTrace(List<Trace> traces);
 
-    ClientResponse<Trace> getFragment(String id);
+public class Criteria extends org.hawkular.apm.api.services.Criteria {
+    static final Logger _logger = LoggerFactory.getLogger(Criteria.class);
 
-    ClientResponse<Trace> getTrace(String id);
+    private static final ObjectMapper MAPPER = new ObjectMapper();
 
-    ClientResponse<List<Trace>> queryFragments(Criteria criteria);
-
-    ClientResponse<Empty> clear();
-
+    public String toString() {
+        try {
+            return MAPPER.writeValueAsString(this);
+        } catch (JsonProcessingException ex) {
+            _logger.error("Exception,", ex);
+            return "{}";
+        }
+    }
 }

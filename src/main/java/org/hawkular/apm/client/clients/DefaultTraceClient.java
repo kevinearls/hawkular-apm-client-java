@@ -21,8 +21,8 @@ import java.util.List;
 import javax.ws.rs.core.Response;
 
 import org.hawkular.apm.api.model.trace.Trace;
-import org.hawkular.apm.api.services.Criteria;
 import org.hawkular.apm.client.jaxrs.handlers.TraceHandler;
+import org.hawkular.apm.client.model.Criteria;
 import org.hawkular.client.core.BaseClient;
 import org.hawkular.client.core.ClientInfo;
 import org.hawkular.client.core.ClientResponse;
