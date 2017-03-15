@@ -25,7 +25,7 @@
     <version>51</version>
   </parent>
   <groupId>org.hawkular.apm.client</groupId>
-  <artifactId>apm-java-client</artifactId>
+  <artifactId>hawkular-apm-java-client</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Hawkular APM REST client</name>
 
